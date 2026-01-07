@@ -3,6 +3,26 @@ from __future__ import annotations
 
 from django.db import models
 from django.core.validators import MinValueValidator
+# ops/models.py
+from django.utils.text import slugify
+
+def build_sku_code(size, fabric_type, print_pattern) -> str:
+    """
+    Example outputs:
+      BAG-STD-COTTON-PLAIN
+      BAG-BABY-CANVAS-P03
+      BAG-LRG-COTTON-FLOWERS
+    """
+    size_code = (size.code or "").upper()
+    fabric_code = slugify(fabric_type.name).upper().replace("-", "")[:10]  # COTTON, CANVAS...
+    if print_pattern is None:
+        print_code = "PLAIN"
+    else:
+        # you can choose one of these styles:
+        # print_code = f"P{print_pattern.id:02d}"   # P03
+        print_code = slugify(print_pattern.name).upper().replace("-", "")[:12]  # FLOWERS
+    return f"BAG-{size_code}-{fabric_code}-{print_code}"
+
 
 
 class TimeStampedModel(models.Model):
@@ -48,7 +68,7 @@ class ProductSKU(TimeStampedModel):
     Sellable + storable unit.
     Plain bag => print_pattern=None
     """
-    sku_code = models.CharField(max_length=60, unique=True)
+    sku_code = models.CharField(max_length=60, unique=True, blank=True)
     size = models.ForeignKey(ProductSize, on_delete=models.PROTECT)
     fabric_type = models.ForeignKey(FabricType, on_delete=models.PROTECT)
     print_pattern = models.ForeignKey(
@@ -71,6 +91,11 @@ class ProductSKU(TimeStampedModel):
 
     def __str__(self) -> str:
         return self.sku_code
+
+    def save(self, *args, **kwargs):
+        if not self.sku_code:
+            self.sku_code = build_sku_code(self.size, self.fabric_type, self.print_pattern)
+        super().save(*args, **kwargs)
 
 
 # -------------------- Inventory (finished goods) --------------------

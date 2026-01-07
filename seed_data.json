@@ -1,0 +1,334 @@
+{
+  "product_sizes": [
+    {
+      "code": "BABY",
+      "display_name": "Baby"
+    },
+    {
+      "code": "STANDARD",
+      "display_name": "Standard"
+    },
+    {
+      "code": "LARGE",
+      "display_name": "Large"
+    }
+  ],
+  "fabric_types": [
+    {
+      "name": "Cotton"
+    },
+    {
+      "name": "Canvas"
+    }
+  ],
+  "print_patterns": [
+    {
+      "name": "Flowers"
+    },
+    {
+      "name": "Hearts"
+    },
+    {
+      "name": "Geometric"
+    },
+    {
+      "name": "Classic Logo"
+    },
+    {
+      "name": "Minimal Lines"
+    },
+    {
+      "name": "Stars"
+    }
+  ],
+  "inventory_locations": [
+    {
+      "name": "Main Stock"
+    },
+    {
+      "name": "Workshop"
+    }
+  ],
+  "product_skus": [
+    {
+      "size_code": "BABY",
+      "fabric_type": "Cotton",
+      "print_pattern": null,
+      "unit_price": "150.00"
+    },
+    {
+      "size_code": "STANDARD",
+      "fabric_type": "Cotton",
+      "print_pattern": "Flowers",
+      "unit_price": "250.00"
+    },
+    {
+      "size_code": "STANDARD",
+      "fabric_type": "Canvas",
+      "print_pattern": "Geometric",
+      "unit_price": "290.00"
+    },
+    {
+      "size_code": "LARGE",
+      "fabric_type": "Canvas",
+      "print_pattern": null,
+      "unit_price": "350.00"
+    },
+    {
+      "size_code": "LARGE",
+      "fabric_type": "Cotton",
+      "print_pattern": "Classic Logo",
+      "unit_price": "330.00"
+    }
+  ],
+  "inventory_balances": [
+    {
+      "location": "Main Stock",
+      "size_code": "BABY",
+      "fabric_type": "Cotton",
+      "print_pattern": null,
+      "qty_on_hand": 12,
+      "reorder_level": 3
+    },
+    {
+      "location": "Main Stock",
+      "size_code": "STANDARD",
+      "fabric_type": "Cotton",
+      "print_pattern": "Flowers",
+      "qty_on_hand": 8,
+      "reorder_level": 2
+    },
+    {
+      "location": "Main Stock",
+      "size_code": "STANDARD",
+      "fabric_type": "Canvas",
+      "print_pattern": "Geometric",
+      "qty_on_hand": 6,
+      "reorder_level": 2
+    },
+    {
+      "location": "Main Stock",
+      "size_code": "LARGE",
+      "fabric_type": "Canvas",
+      "print_pattern": null,
+      "qty_on_hand": 4,
+      "reorder_level": 1
+    },
+    {
+      "location": "Workshop",
+      "size_code": "LARGE",
+      "fabric_type": "Cotton",
+      "print_pattern": "Classic Logo",
+      "qty_on_hand": 2,
+      "reorder_level": 1
+    }
+  ],
+  "fabric_materials": [
+    {
+      "fabric_type": "Cotton",
+      "uom": "meter",
+      "is_printed": false,
+      "print_pattern": null
+    },
+    {
+      "fabric_type": "Canvas",
+      "uom": "meter",
+      "is_printed": false,
+      "print_pattern": null
+    },
+    {
+      "fabric_type": "Cotton",
+      "uom": "meter",
+      "is_printed": true,
+      "print_pattern": "Flowers"
+    },
+    {
+      "fabric_type": "Canvas",
+      "uom": "meter",
+      "is_printed": true,
+      "print_pattern": "Geometric"
+    },
+    {
+      "fabric_type": "Cotton",
+      "uom": "meter",
+      "is_printed": true,
+      "print_pattern": "Classic Logo"
+    }
+  ],
+  "fabric_inventory": [
+    {
+      "location": "Workshop",
+      "fabric_type": "Cotton",
+      "uom": "meter",
+      "is_printed": false,
+      "print_pattern": null,
+      "qty_on_hand": "60.000"
+    },
+    {
+      "location": "Workshop",
+      "fabric_type": "Canvas",
+      "uom": "meter",
+      "is_printed": false,
+      "print_pattern": null,
+      "qty_on_hand": "40.000"
+    },
+    {
+      "location": "Main Stock",
+      "fabric_type": "Cotton",
+      "uom": "meter",
+      "is_printed": true,
+      "print_pattern": "Flowers",
+      "qty_on_hand": "15.000"
+    },
+    {
+      "location": "Main Stock",
+      "fabric_type": "Canvas",
+      "uom": "meter",
+      "is_printed": true,
+      "print_pattern": "Geometric",
+      "qty_on_hand": "10.000"
+    },
+    {
+      "location": "Main Stock",
+      "fabric_type": "Cotton",
+      "uom": "meter",
+      "is_printed": true,
+      "print_pattern": "Classic Logo",
+      "qty_on_hand": "8.000"
+    }
+  ],
+  "customers": [
+    {
+      "full_name": "Ali Test",
+      "phone": "01000000000",
+      "email": "ali@example.com",
+      "address": "Cairo, Egypt"
+    },
+    {
+      "full_name": "Mona Sample",
+      "phone": "01111111111",
+      "email": "mona@example.com",
+      "address": "Giza, Egypt"
+    }
+  ],
+  "order_statuses": [
+    {
+      "code": "NEW",
+      "display_name": "New",
+      "sort_order": 10
+    },
+    {
+      "code": "CONFIRMED",
+      "display_name": "Confirmed",
+      "sort_order": 20
+    },
+    {
+      "code": "IN_PRODUCTION",
+      "display_name": "In production",
+      "sort_order": 30
+    },
+    {
+      "code": "SHIPPED",
+      "display_name": "Shipped",
+      "sort_order": 40
+    },
+    {
+      "code": "DELIVERED",
+      "display_name": "Delivered",
+      "sort_order": 50
+    },
+    {
+      "code": "CANCELED",
+      "display_name": "Canceled",
+      "sort_order": 90
+    }
+  ],
+  "orders": [
+    {
+      "order_ref": "TEST-0001",
+      "customer": "Ali Test",
+      "status": "NEW",
+      "order_date": "2026-01-06",
+      "shipping_fee": "50.00",
+      "discount": "0.00",
+      "notes": "Seed order TEST-0001",
+      "items": [
+        {
+          "size_code": "STANDARD",
+          "fabric_type": "Cotton",
+          "print_pattern": "Flowers",
+          "qty": 2,
+          "unit_price": "250.00"
+        },
+        {
+          "size_code": "BABY",
+          "fabric_type": "Cotton",
+          "print_pattern": null,
+          "qty": 1,
+          "unit_price": "150.00"
+        }
+      ]
+    },
+    {
+      "order_ref": "TEST-0002",
+      "customer": "Mona Sample",
+      "status": "CONFIRMED",
+      "order_date": "2026-01-07",
+      "shipping_fee": "40.00",
+      "discount": "20.00",
+      "notes": "Seed order TEST-0002",
+      "items": [
+        {
+          "size_code": "LARGE",
+          "fabric_type": "Canvas",
+          "print_pattern": null,
+          "qty": 1,
+          "unit_price": "350.00"
+        }
+      ]
+    }
+  ],
+  "expense_types": [
+    {
+      "name": "Fabric"
+    },
+    {
+      "name": "Printing"
+    },
+    {
+      "name": "Packaging"
+    },
+    {
+      "name": "Shipping"
+    },
+    {
+      "name": "Marketing"
+    }
+  ],
+  "expenses": [
+    {
+      "expense_type": "Fabric",
+      "amount": "500.00",
+      "currency": "EGP",
+      "expense_date": "2026-01-05",
+      "vendor": "Supplier X",
+      "notes": "Cotton roll (raw)"
+    },
+    {
+      "expense_type": "Printing",
+      "amount": "220.00",
+      "currency": "EGP",
+      "expense_date": "2026-01-06",
+      "vendor": "Print House",
+      "notes": "Flowers print batch"
+    },
+    {
+      "expense_type": "Packaging",
+      "amount": "80.00",
+      "currency": "EGP",
+      "expense_date": "2026-01-06",
+      "vendor": "Packaging Store",
+      "notes": "Bags & stickers"
+    }
+  ]
+}

@@ -10,10 +10,18 @@ from .models import (
     ExpenseType, Expense,
 )
 
+@admin.register(ProductSKU)
+class ProductSKUAdmin(admin.ModelAdmin):
+    list_display = ("sku_code", "size", "fabric_type", "print_pattern", "unit_price", "is_active")
+    list_filter = ("size", "fabric_type", "print_pattern", "is_active")
+    search_fields = ("sku_code",)
+    readonly_fields = ("sku_code",)
+
+
 admin.site.register(ProductSize)
 admin.site.register(FabricType)
 admin.site.register(PrintPattern)
-admin.site.register(ProductSKU)
+
 
 admin.site.register(InventoryLocation)
 admin.site.register(InventoryBalance)
